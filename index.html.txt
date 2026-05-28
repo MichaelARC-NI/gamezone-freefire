@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GameZone Nicaragua - Recargas Oficiales de Diamantes Free Fire</title>
+    <meta name="description" content="Recargas de diamantes Free Fire en Nicaragua. Precios transparentes en dólares basados en las tarifas oficiales del juego. Servicio seguro administrado por Michael Rodríguez.">
+    <meta name="keywords" content="GameZone, GameZone Nicaragua, diamantes Free Fire Nicaragua, recargas Free Fire baratas, recargas en dolares, recargas por WhatsApp, comprar diamantes, Michael Antonio Rodriguez Condega, Omar Pavon">
+    <meta name="author" content="Michael Antonio Rodriguez Condega">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="GameZone Nicaragua - Tus Recargas de Free Fire Seguras">
+    <meta property="og:description" content="Diamantes oficiales con bono del 10%. Pagos en efectivo, transferencia local o dólares. Administrado por Michael Rodríguez y Omar Pavón.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #050f0a;
+            --bg-card: rgba(0, 230, 118, 0.04);
+            --border-card: rgba(0, 230, 118, 0.15);
+            --text: #e0f2f1;
+            --text-muted: #75a478;
+            --accent: #00e676;
+            --accent2: #00b0ff;
+            --glow: rgba(0, 230, 118, 0.3);
+            --gradient: linear-gradient(135deg, #00e676, #00b0ff);
+            --shadow: 0 8px 32px rgba(0,230,118,0.1);
+            --font-display: 'Orbitron', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body.blue {
+            --bg: #0a0a1a;
+            --bg-card: rgba(255,255,255,0.04);
+            --border-card: rgba(255,255,255,0.08);
+            --text: #f0f0f5;
+            --text-muted: #8888aa;
+            --accent: #00d4ff;
+            --accent2: #7c3aed;
+            --glow: rgba(0,212,255,0.3);
+            --gradient: linear-gradient(135deg, #00d4ff, #7c3aed);
+            --shadow: 0 8px 32px rgba(0,0,0,0.4);
+            --font-display: 'Playfair Display', serif;
+        }
+
+        body.light {
+            --bg: #f4f6f9;
+            --bg-card: rgba(255,255,255,0.8);
+            --border-card: rgba(0,0,0,0.08);
+            --text: #1a237e;
+            --text-muted: #5c6bc0;
+            --accent: #00c853;
+            --accent2: #00b0ff;
+            --glow: rgba(0,200,83,0.2);
+            --gradient: linear-gradient(135deg, #00c853, #00b0ff);
+            --shadow: 0 8px 32px rgba(0,0,0,0.05);
+        }
+
+        body.pro {
+            --bg: #0d0d0d;
+            --bg-card: rgba(255,215,0,0.04);
+            --border-card: rgba(255,215,0,0.15);
+            --text: #ffd700;
+            --text-muted: #b8960f;
+            --accent: #ffd700;
+            --accent2: #ff8c00;
+            --glow: rgba(255,215,0,0.3);
+            --gradient: linear-gradient(135deg, #ffd700, #ff8c00);
+            --shadow: 0 8px 32px rgba(255,215,0,0.1);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            transition: background 0.5s ease, color 0.5s ease;
+            overflow-x: hidden;
+        }
+
+        #particles-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .theme-switcher {
+            position: fixed;
+            top: 20px; right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 6px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            padding: 6px 10px;
+            border-radius: 50px;
+            border: 1px solid var(--border-card);
+            box-shadow: var(--shadow);
+        }
+
+        .theme-btn {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+        }
+        .theme-btn:hover { transform: scale(1.15); }
+        .theme-btn.active { border-color: var(--accent); box-shadow: 0 0 12px var(--glow); transform: scale(1.1); }
+        .theme-btn[data-theme="green"] { background: #000; color: #00e676; }
+        .theme-btn[data-theme="blue"] { background: #1a1a2e; color: #00d4ff; }
+        .theme-btn[data-theme="light"] { background: #fff; color: #0066ff; }
+        .theme-btn[data-theme="pro"] { background: #1a0f00; color: #ffd700; }
+
+        .top-bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 20px;
+        }
+        .top-bar .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .game-icon-header {
+            font-size: 4.5rem;
+            display: block;
+            margin-bottom: 12px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px var(--glow));
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .tabs {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 20px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+        .tab-btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: 1px solid var(--border-card);
+            background: var(--bg-card);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow);
+        }
+        .tab-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .tab-btn.active {
+            background: var(--gradient);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 4px 20px var(--glow);
+        }
+
+        .section { display: none; position: relative; z-index: 1; }
+        .section.active { display: block; }
+
+        .section-header { text-align: center; padding: 20px 20px 15px; }
+        .section-header h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 6px; }
+        .section-header p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .stats-bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 12px 24px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-card);
+            backdrop-filter: blur(8px);
+            min-width: 100px;
+            max-width: 200px;
+            flex: 1;
+        }
+        .stat-num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-card);
+            border-radius: 24px;
+            padding: 28px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--accent), transparent 30%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            animation: cardRotate 6s linear infinite;
+        }
+        @keyframes cardRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .card:hover::before { opacity: 0.08; }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent);
+            box-shadow: 0 16px 48px var(--glow);
+        }
+        .card-badge {
+            position: absolute;
+            top: 12px; left: 12px;
+            background: var(--gradient);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .card-badge.best { background: linear-gradient(135deg, #ffd700, #ff8c00); }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            display: block;
+            filter: drop-shadow(0 0 10px var(--glow));
+        }
+        .card-title { font-size: 1.6rem; font-weight: 800; font-family: var(--font-display); margin-bottom: 6px; }
+        .card-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding: 4px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid var(--border-card);
+            margin-bottom: 16px;
+            background: var(--bg-card);
+        }
+        .card-desc strong { color: var(--accent); }
+        .price { font-size: 1.8rem; font-weight: 800; color: var(--accent); margin-bottom: 18px; font-family: var(--font-display); }
+        .price small { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+        .btn-buy {
+            background: var(--gradient);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            font-family: var(--font-body);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--glow);
+            width: 100%;
+        }
+        .btn-buy::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        .btn-buy:hover::after { transform: translateX(100%); }
+        .btn-buy:hover { transform: scale(1.03); box-shadow: 0 8px 24px var(--glow); }
+        .btn-buy:active { transform: scale(0.97); }
+
+        /* ===== SYSTEMA MODAL DE SELECCIÓN DE CONTACTO ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            background: var(--bg);
+            border: 2px solid var(--border-card);
+            border-radius: 28px;
+            padding: 32px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            animation: modalFade 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes modalFade { 
+            from { opacity: 0; transform: translateY(25px) scale(0.95); } 
+            to { opacity: 1; transform: translateY(0) scale(1); } 
+        }
+        .close-modal {
+            position: absolute;
+            top: 16px; right: 22px;
+            font-size: 1.6rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close-modal:hover { color: var(--accent); }
+        .modal-content h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 8px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        #modal-package-info { font-size: 1.3rem; font-weight: 800; margin-bottom: 18px; color: var(--text); border-bottom: 1px solid var(--border-card); padding-bottom: 14px; }
+        .modal-instruction { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.4; }
+        .modal-actions { display: flex; flex-direction: column; gap: 14px; }
+        .btn-modal-profile { 
+            text-align: left; 
+            padding: 14px 20px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 3px; 
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .profile-role { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.85; font-weight: 600; color: #fff; }
+        .profile-name { font-size: 1.1rem; font-weight: 800; }
+
+        .info-section { position: relative; z-index: 1; max-width: 850px; margin: 0 auto; padding: 0 20px 60px; }
+        .info-card { background: var(--bg-card); backdrop-filter: blur(12px); border: 1px solid var(--border-card); border-radius: 24px; padding: 36px; box-shadow: var(--shadow); }
+        .info-card h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; color: var(--accent); }
+        .info-card p, .info-card li { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 14px; }
+        .info-card ul { list-style: none; padding: 0; margin-bottom: 14px; }
+        .info-card ul li::before { content: '✓ '; color: var(--accent); font-weight: 700; }
+        .info-card strong { color: var(--text); }
+
+        footer { position: relative; z-index: 1; text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-card); max-width: 1200px; margin: 0 auto; }
+
+        @media (max-width: 640px) {
+            .theme-switcher { top: 10px; right: 10px; gap: 4px; padding: 5px 8px; }
+            .theme-btn { width: 28px; height: 28px; font-size: 0.7rem; }
+            header { padding: 30px 16px 10px; }
+            .game-icon-header { font-size: 3.5rem; }
+            .grid-container { gap: 16px; padding: 0 12px 40px; }
+            .card { padding: 22px; }
+            .card-title { font-size: 1.35rem; }
+            .price { font-size: 1.5rem; }
+            .tab-btn { font-size: 0.85rem; padding: 10px 18px; }
+            .info-card { padding: 24px; }
+            .stat-item { min-width: 45%; padding: 10px; }
+            .modal-content { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body class="green">
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="green" title="Esmeralda">💚</button>
+        <button class="theme-btn" data-theme="blue" title="Oscuro">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Claro">☀️</button>
+        <button class="theme-btn" data-theme="pro" title="Pro">👑</button>
+    </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="top-bar">
+        <span class="logo-text">✨ GameZone Free Fire</span>
+    </div>
+
+    <header>
+        <span class="game-icon-header">💎</span>
+        <h1>GameZone Nicaragua</h1>
+        <p>Sincronización directa en Dólares (USD) basada en la estructura original y tarifas oficiales del juego</p>
+    </header>
+
+    <div class="tabs" id="tabs">
+        <button class="tab-btn active" data-section="diamantes">
+            <span class="tab-icon">🎮</span> Tienda de Diamantes
+        </button>
+        <button class="tab-btn" data-section="info">
+            <span class="tab-icon">ℹ️</span> Información & Tarifas
+        </button>
+    </div>
+
+    <!-- SECCIÓN TIENDA -->
+    <div class="section active" id="section-diamantes">
+        <div class="section-header">
+            <h2>💎 Paquetes de Diamantes</h2>
+            <p>Recargas 100% directas a tu ID con el bono del 10% de Garena incluido</p>
+        </div>
+ 
+        <div class="stats-bar" id="stats-diamantes">
+            <div class="stat-item">
+                <div class="stat-num" id="d-clientes">0</div>
+                <div class="stat-label">Clientes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" id="d-entregas">0</div>
+                <div class="stat-label">Entregas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" id="d-paquetes">0</div>
+                <div class="stat-label">Paquetes</div>
+            </div>
+        </div>
+   
+        <div class="grid-container" id="tienda-diamantes"></div>
+    </div>
+
+    <!-- SECCIÓN INFO -->
+    <div class="section" id="section-info">
+        <div class="section-header">
+            <h2>ℹ️ Información del Servicio</h2>
+        </div>
+        <div class="info-section">
+            <div class="info-card">
+                <h3>🤝 ¿Cómo funciona el servicio?</h3>
+                <p>
+                    <strong>GameZone Nicaragua</strong> es una plataforma independiente administrada por <strong>Michael Antonio Rodriguez Condega</strong> en colaboración con **Omar Enrique Pavón Parrales**. Está optimizada para ofrecer un proceso rápido, transparente y directo para jugadores en Nicaragua que buscan adquirir sus diamantes sin complicaciones.
+                </p>
+                <ul>
+                    <li><strong>Selecciona tu paquete:</strong> Explora la lista de precios oficiales en dólares. Al presionar comprar, se desplegará la opción para elegir con quién deseas comunicarte.</li>
+                    <li><strong>Contacto Flexible:</strong> Puedes procesar tu recarga tanto con Michael (Propietario) como con Omar (Colaborador) según la disponibilidad en el chat de WhatsApp.</li>
+                    <li><strong>Procesamiento Inmediato:</strong> Una vez verificado el pago, tus diamantes se cargan directo a tu ID de juego de manera segura.</li>
+                </ul>
+
+                <h3 style="margin-top:24px;">💵 ¿Por qué los precios están en Dólares (USD)?</h3>
+                <p>
+                    Para garantizar la máxima transparencia, los precios se muestran en <strong>Dólares Americanos ($)</strong> reflejando fielmente la tasa de la tienda oficial del juego. Esto permite:
+                </p>
+                <ul>
+                    <li><strong>Cero comisiones fantasma:</strong> Pagas el valor real del paquete sin sobrecostos arbitrarios de conversión de divisas.</li>
+                    <li><strong>Flexibilidad de pago local:</strong> Puedes realizar tu pago equivalentemente en <strong>Córdobas (C$)</strong> calculados estrictamente bajo el tipo de cambio de venta bancario del día, o directamente entregar el monto en efectivo o depósito en dólares.</li>
+                </ul>
+
+                <h3 style="margin-top:24px;">✅ Métodos de Pago y Garantía</h3>
+                <p>
+                    Aceptamos depósitos, transferencias en los principales bancos locales (Banpro, LAFISE, BAC, Ficohsa) y efectivo presencial según acuerdo mutuo. Al tratar directamente con nosotros, tienes la total certeza de un trato honesto, seguro y sin sorpresas de última hora.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE SELECCIÓN DE OPERADOR (WHATSAPP) -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Confirmar Pedido</h3>
+            <div id="modal-package-info">Cargando paquete...</div>
+            <p class="modal-instruction">Selecciona el asesor disponible para procesar tu recarga de inmediato por WhatsApp:</p>
+            <div class="modal-actions">
+                <a id="btn-pay-michael" target="_blank" class="btn-buy btn-modal-profile">
+                    <span class="profile-role">👑 Propietario</span>
+                    <span class="profile-name">Michael Rodríguez</span>
+                </a>
+                <a id="btn-pay-omar" target="_blank" class="btn-buy btn-modal-profile" style="background: linear-gradient(135deg, #00b0ff, #7c3aed);">
+                    <span class="profile-role">🤝 Colaborador Verificado</span>
+                    <span class="profile-name">Omar Pavón</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🎮 GameZone Nicaragua &mdash; Administrado de forma independiente por Michael Antonio Rodriguez Condega</p>
+        <p style="margin-top:6px; font-size:0.75rem; opacity:0.8;">
+            &copy; 2026 GameZone Nicaragua. No afiliado directamente con Garena de forma corporativa. Servicio de intermediación confiable para la comunidad gamer.
+        </p>
+    </footer>
+
+    <script>
+        // ===== PARTICLES ENGINE =====
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        function getAccentColor() {
+            const style = getComputedStyle(document.body);
+            return style.getPropertyValue('--accent').trim();
+        }
+
+        function createParticle() {
+            const accent = getAccentColor();
+            const isGem = Math.random() > 0.80;
+            return {
+                x: Math.random() * canvas.width,
+                y: canvas.height + 20,
+                size: isGem ? 8 + Math.random() * 12 : 2 + Math.random() * 3,
+                speedY: -0.3 - Math.random() * 0.7,
+                speedX: (Math.random() - 0.5) * 0.3,
+                opacity: 0.2 + Math.random() * 0.5,
+                rotate: Math.random() * 360,
+                rotateSpeed: (Math.random() - 0.5) * 2,
+                isGem,
+                color: isGem ? accent : `rgba(255,255,255,${0.1 + Math.random() * 0.2})`,
+                life: 0,
+                maxLife: 300 + Math.random() * 400
+            };
+        }
+
+        for (let i = 0; i < 35; i++) {
+            const p = createParticle();
+            p.y = Math.random() * canvas.height;
+            particles.push(p);
+        }
+
+        function drawGem(x, y, size, rotate, color, opacity) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rotate * Math.PI / 180);
+            ctx.globalAlpha = opacity;
+            ctx.fillStyle = color;
+            ctx.shadowColor = color;
+            ctx.shadowBlur = 12;
+            const s = size / 2;
+            ctx.beginPath();
+            ctx.moveTo(0, -s);
+            ctx.lineTo(s * 0.7, 0);
+            ctx.lineTo(0, s);
+            ctx.lineTo(-s * 0.7, 0);
+            ctx.closePath();
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            ctx.fillStyle = 'rgba(255,255,255,0.25)';
+            ctx.beginPath();
+            ctx.moveTo(0, -s * 0.5);
+            ctx.lineTo(s * 0.35, 0);
+            ctx.lineTo(0, s * 0.5);
+            ctx.lineTo(-s * 0.35, 0);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (Math.random() > 0.6 && particles.length < 70) particles.push(createParticle());
+            particles = particles.filter(p => p.life < p.maxLife);
+            const accent = getAccentColor();
+            particles.forEach(p => {
+                p.y += p.speedY;
+                p.x += p.speedX;
+                p.rotate += p.rotateSpeed;
+                p.life++;
+                const fade = p.life < 60 ? p.life / 60 : 1;
+                const fadeOut = p.life > p.maxLife - 60 ? (p.maxLife - p.life) / 60 : 1;
+                const op = p.opacity * fade * fadeOut;
+           
+                if (p.isGem) {
+                    p.color = accent;
+                    drawGem(p.x, p.y, p.size, p.rotate, accent, op);
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = op * 0.4;
+                    ctx.fill();
+                }
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ===== THEME SWITCHER =====
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.body.className = btn.dataset.theme;
+            });
+        });
+
+        // ===== TABS SYSTEM =====
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.getElementById('section-' + btn.dataset.section).classList.add('active');
+            });
+        });
+
+        // ===== DATA & TIENDA CORE =====
+        const WA_MICHAEL = '50583341349';
+        const WA_OMAR = '50587886017';
+        
+        function renderCards(containerId, items, icon, badgeLabel) {
+            const container = document.getElementById(containerId);
+            items.forEach((item, idx) => {
+                const isBest = idx === 2 || idx === 3;
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    ${isBest ? '<div class="card-badge best">⭐ Más Vendido</div>' : `<div class="card-badge">${badgeLabel}</div>`}
+                    <div>
+                        <span class="card-icon">${icon}</span>
+                        <div class="card-title">${item.titulo}</div>
+                        <div class="card-desc">${item.desc || ''}</div>
+                    </div>
+                    <div>
+                        <div class="price">$ ${item.precio} <small>USD</small></div>
+                        <button class="btn-buy" onclick="openCheckoutModal('${item.titulo}', '${item.precio}')">Comprar por WhatsApp</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        const diamantes = [
+            { titulo: '100 + 10 Diamantes', desc: 'Bono Garena 10% incluido', precio: '1.14' },
+            { titulo: '310 + 31 Diamantes', desc: 'Bono Garena 10% incluido', precio: '3.45' },
+            { titulo: '520 + 52 Diamantes', desc: 'Bono Garena 10% incluido', precio: '5.38' },
+            { titulo: '1,060 + 106 Diamantes', desc: 'Bono Garena 10% incluido', precio: '12' },
+            { titulo: '2,180 + 218 Diamantes', desc: 'Bono Garena 10% incluido', precio: '22.32' },
+            { titulo: '5,600 + 560 Diamantes', desc: 'Bono Garena 10% incluido', precio: '54' }
+        ];
+        
+        renderCards('tienda-diamantes', diamantes, '💎', 'Free Fire');
+
+        // ===== SISTEMA DE CONTROL DEL MODAL =====
+        const modal = document.getElementById('checkout-modal');
+        const closeModalBtn = document.querySelector('.close-modal');
+
+        function openCheckoutModal(titulo, precio) {
+            document.getElementById('modal-package-info').textContent = `${titulo} — $${precio} USD`;
+            
+            const msg = `Hola, quiero comprar el paquete oficial de ${titulo} por $${precio} USD para mi ID de Free Fire.`;
+            const encodedMsg = encodeURIComponent(msg);
+            
+            // Inyectamos las URLs personalizadas a cada botón
+            document.getElementById('btn-pay-michael').href = `https://wa.me/${WA_MICHAEL}?text=${encodedMsg}`;
+            document.getElementById('btn-pay-omar').href = `https://wa.me/${WA_OMAR}?text=${encodedMsg}`;
+            
+            modal.classList.add('active');
+        }
+
+        closeModalBtn.addEventListener('click', () => modal.classList.remove('active'));
+        window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+
+        // ===== ANIMATED COUNTERS =====
+        function animateCounter(el, target) {
+            let current = 0;
+            const step = Math.ceil(target / 50);
+            const interval = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(interval); }
+                el.textContent = current.toLocaleString('es-NI') + '+';
+            }, 25);
+        }
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    animateCounter(document.getElementById('d-clientes'), 1547);
+                    animateCounter(document.getElementById('d-entregas'), 3200);
+                    animateCounter(document.getElementById('d-paquetes'), diamantes.length);
+                    obs.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        obs.observe(document.getElementById('stats-diamantes'));
+    </script>
+</body>
+</html>
