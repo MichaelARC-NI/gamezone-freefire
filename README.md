@@ -10,8 +10,6 @@ El sitio web está diseñado con una estética moderna e interactiva, ofreciendo
 
 ## 🚀 Características Principales
 
-* ⚡ **Enfoque Único:** Interfaz limpia y simplificada, removiendo distracciones para centrarse al 100% en los paquetes de Free Fire.
-* 💵 **Tarifas en Dólares (USD):** Precios perfectamente sincronizados con la estructura interna y capturas oficiales del juego (desde $1.14 hasta $53.12 USD), garantizando total transparencia sin comisiones fantasma.
 * 🤝 **Sistema Multi-Operador (Modal Inteligente):** Integra una ventana emergente interactiva que le permite al usuario elegir con quién comunicarse por WhatsApp para procesar su recarga:
     * **👑 Michael Rodríguez** (Propietario)
     * **🤝 Omar Pavón** (Colaborador Verificado)
