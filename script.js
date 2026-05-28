@@ -5,7 +5,7 @@ const WA_OMAR = '50587886017';
 // ===== INTERRUPTORES DE ESTADO (CONECTADOS / DESCONECTADOS) =====
 // true = En línea  |  false = Desconectado (Cambia de color y muestra etiqueta)
 const MICHAEL_ONLINE = true; 
-const OMAR_ONLINE = false; // Lo puse en false para probar cómo se ve Omar desconectado
+const OMAR_ONLINE = true; // Lo puse en false para probar cómo se ve Omar desconectado
 
 
 // ===== MOTOR DE PARTÍCULAS (DIAMANTES GIRATORIOS) =====
